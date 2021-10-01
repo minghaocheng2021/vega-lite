@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart that sorts the y-values by the x-values.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/minghaocheng2021/vega-lite/main/longformat_suburn.csv"
+  },
+  "transform": [{"filter": "datum.locality === 'CLAYTON' "}],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "house price", "type": "quantitative"}
+  },
+  "config": {}
+}
