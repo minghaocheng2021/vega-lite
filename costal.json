@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/minghaocheng2021/vega-lite/main/coastal_suburbs.csv"
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"timeUnit": "year", "field": "Year", "title": "Date"},
+    "y": {
+      "aggregate": "mean",
+      "field": "house price",
+      "type": "quantitative",
+      "title": "Price"
+    },
+    "color": {
+      "field": "locality",
+      "type": "nominal",
+      "title": "Coastal Suburbs"
+    }
+  },
+  "config": {}
+}
