@@ -19,6 +19,7 @@
   <script type="text/javascript">
     var specVis1 = "zoomableMap.vl.json";
     var specVis2= "10year.json";
+    var specVis3= "top10barchart.json";
   
     vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -73,16 +74,10 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-2-3">
+        <div class="pure-u-5-5">
           <div id="vis2"  class="vis-container"></div>
         </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>This is the second section</h2>
-            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-          </div>
-        </div>
-      
+
     </div>
     <!-- end pure grid group -->
 
@@ -94,16 +89,14 @@
     <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>This is the third section</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>Top 10 Expensive Suburbs</h2>
+          <p>As we can see the top 10 suburbs are centering melbourne city. Toorak has the highest hosue price for a long time due to the history and location. Threre are excellent schools and livable envirnonment such as river and park. Also, more and more immagrants move in to Australia recenlt years which causes the hosue price increase in the hosue market.  .</p>
         </div>
       </div>
-      <div class="pure-u-1-3">
-       
-      </div>
-      <div class="pure-u-1-3">
-       
-      </div>
+     <div class="pure-u-2-3">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+    </div>
     
     </div>
     <!-- end pure grid group -->
