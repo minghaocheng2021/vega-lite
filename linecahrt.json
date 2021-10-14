@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 250,
+  "height": 200,
+  "description": "Top 10 suburbs between 2009-2020.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/minghaocheng2021/vega-lite/main/top_10longformat_suburn.csv"
+  },
+  "params": [
+    {
+      "name": "Suburbs_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          "null",
+          "TOORAK",
+          "MIDDLE PARK",
+          "EAST MELBOURNE",
+          "DEEPDENE",
+          "CANTERBURY",
+          "BRIGHTON",
+          "MALVERN",
+          "ARMADALE",
+          "BALWYN",
+          "KEW"
+        ],
+        "labels": [
+          "Show All",
+          "TOORAK",
+          "MIDDLE PARK",
+          "EAST MELBOURNE",
+          "DEEPDENE",
+          "CANTERBURY",
+          "BRIGHTON",
+          "MALVERN",
+          "ARMADALE",
+          "BALWYN",
+          "KEW"
+        ],
+        "name": "Suburb Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year >0"},
+    {
+      "filter": "Suburbs_selection == null || datum.locality == Suburbs_selection "
+    }
+  ],
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"timeUnit": "year", "field": "Year", "title": "Date"},
+    "y": {
+      "aggregate": "mean",
+      "field": "house price",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1000000, 5000000]},
+      "title": "Price"
+    },
+    "color": {
+      "field": "locality",
+      "type": "nominal",
+      "title": "Top     10    Suburbs."
+    }
+  },
+  "config": {}
+}
