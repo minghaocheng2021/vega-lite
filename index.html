@@ -20,7 +20,8 @@
     var specVis1 = "zoomableMap.vl.json";
     var specVis2= "10year.json";
     var specVis3= "top10barchart.json";
-  
+    var specVis4= ".json";
+    
     vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
@@ -72,8 +73,11 @@ With the outstanding theatre, arts, culture, cafes, restaurants and so on. Melbo
         </div>
         <div class="pure-u-1-2">
           <div id="vis1" class="vis-container"></div>
+           </div>
+        <div class="pure-u-1-2">
+          <div id="vis4" class="vis-container"></div>
         </div>
-    </div>
+    
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
