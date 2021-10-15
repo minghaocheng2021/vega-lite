@@ -49,7 +49,7 @@
           display: flex;
           flex-direction: column;
       }
-      .pure-g.row:nth-child(2n){
+      .pure-g.row > div:nth-child(n+2){
             padding-left: 20px;
       }
 
